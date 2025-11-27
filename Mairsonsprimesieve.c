@@ -12,7 +12,7 @@ uint32_t *Mairsonsprimesieve(uint32_t n, uint32_t *numprimes) {
   // assert(primes);
   if (n < 2) return NULL;
   uint8_t *composites = calloc(n,sizeof(uint8_t));
-  assert(composites);
+  if (composites == NULL) return NULL;
   uint32_t p = 2;
   uint32_t psqrd = p*p;
   while (psqrd <= n) {
@@ -29,6 +29,10 @@ uint32_t *Mairsonsprimesieve(uint32_t n, uint32_t *numprimes) {
   uint32_t primecount = n-1;
   for (uint32_t i=1; i<n; i++) primecount -= composites[i];
   uint32_t *primes = malloc(primecount*sizeof(uint32_t));
+  if (primes == NULL) {
+    free(composites);
+    return NULL;
+  }
   uint32_t primeix = 0;
   for (uint32_t i=1; i<n; i++) if (0 == composites[i]) primes[primeix++] = 1+i;
   *numprimes = primecount;
