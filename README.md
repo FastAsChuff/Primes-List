@@ -20,7 +20,7 @@ Output to primes.txt
 
 
 UPDATE:
-I made a faster program based on Mairson's adaptation of the Sieve of Eratosthenes. Max 3GB Required.
+I made a faster program based on Mairson's adaptation of the Sieve of Eratosthenes. Max 3GB Required. Print the primes by appending --printprimes argument.
 
 CPU:i7 - 6700 3.4GHz
 
