@@ -25,9 +25,12 @@ I made a faster program based on Mairson's adaptation of the Sieve of Eratosthen
 CPU:i7 - 6700 3.4GHz
 
 simon@Bob:~$ time ./Mairsonsprimesievetest.bin 4294967295 
+
 Found 203280221 primes <= 4294967295 with sum 425649736193687430.
 
 real	0m22.758s
+
 user	0m21.727s
+
 sys	0m1.031s
 
