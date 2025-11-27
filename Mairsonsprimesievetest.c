@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
   } else {
     n = atol(argv[1]);
     if (n < 2) validinput = false;
-    if (argc > 2) printprimes = (0 == memcmp(printprimesliteral, argv[2], strlen(printprimesliteral)));
+    if (argc > 2) printprimes = (0 == strcmp(printprimesliteral, argv[2]));
   }
   if (!validinput) {
     printf("This program tests a naive implementation of Mairson's algorithm for creating a list of all primes <= n.\nAuthor: Simon Goater Nov 2025\nUsage: %s n [%s]\n2 <= n < 2^32\n~n bytes of RAM required.\n", argv[0], printprimesliteral);
