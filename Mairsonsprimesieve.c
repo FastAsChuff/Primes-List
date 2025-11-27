@@ -4,7 +4,7 @@ uint32_t *Mairsonsprimesieve(uint32_t n, uint32_t *numprimes) {
   // based on algorithm described here https://dl.acm.org/doi/pdf/10.1145/358527.358540
   // 'A Sublinear Additive Sieve For Finding Prime Numbers' by Paul Pritchard Jan 1981.
   // Note: Mairson's isn't the claimed 'Sublinear' algorithm in the paper.
-  // ~n(1+4/ln(n)) bytes of RAM required. Max 3GB.
+  // ~n(1+8/ln(n))/2 bytes of RAM required. Max 3GB.
   // E.g. 
   // uint32_t numprimes;
   // uint32_t *primes = Mairsonsprimesieve(n, &numprimes);
